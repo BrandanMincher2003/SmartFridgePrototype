@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ffsmartapplication.controllers.HealthSafetyReportController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox spacing="10">
+        <Button maxWidth="80" onAction="#handleBack" styleClass="text-field" stylesheets="@../../../styles/healthsafetyreport.css" text="Back" />
+    </HBox>
+
+    <Label style="-fx-font-size: 18;" text="Health &amp; Safety Report" />
+
+    <TextArea fx:id="reportTextArea" prefHeight="300" prefWidth="400" />
+
+    <Button onAction="#handleSubmitReport" style="-fx-pref-width: 120;" styleClass="text-field" stylesheets="@../../../styles/healthsafetyreport.css" text="Submit Report" />
+</VBox>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ffsmartapplication.controllers.DeliveriesController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox spacing="10">
+        <Button maxWidth="80" onAction="#handleBack" styleClass="text-field" stylesheets="@../../../styles/deliveries.css" text="Back" />
+    </HBox>
+
+    <TableView fx:id="deliveriesTable" prefHeight="400" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="colOrderNumber" prefWidth="120" text="Order Number" />
+            <TableColumn fx:id="colItemName" prefWidth="120" text="Item Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="74.0" text="Quantity" />
+            <TableColumn fx:id="colSupplier" prefWidth="166.0" text="Supplier" />
+            <!-- Possibly also "Delivery Status" -->
+        </columns>
+    </TableView>
+</VBox>

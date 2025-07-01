@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ffsmartapplication.controllers.RegisterController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="40" />
+    </padding>
+
+    <!-- Title -->
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Registration" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font></Label>
+
+    <!-- Username -->
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="usernameField" promptText="Enter username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <!-- Password -->
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <PasswordField fx:id="passwordField" promptText="Enter password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <!-- Email -->
+    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="emailField" promptText="Enter email" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <!-- Role ComboBox -->
+    <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <ComboBox fx:id="roleComboBox" styleClass="text-field" stylesheets="@../../../styles/register.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <!-- Register Button -->
+    <Button onAction="#handleRegister" style="-fx-pref-width: 200; -fx-font-size: 16;" styleClass="green-button" stylesheets="@../../../styles/register.css" text="Register" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+
+    <!-- Back Button -->
+    <Button onAction="#handleBack" style="-fx-pref-width: 200;" styleClass="text-field" stylesheets="@../../../styles/register.css" text="Back" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>

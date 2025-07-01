@@ -1,0 +1,8 @@
+.text-field, .password-field {
+    -fx-background-color: #90CAF9;  /* Pale light-blue color (AliceBlue) */
+    -fx-border-color: #5D81A3;      /* grey-blue border */
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+/*  #ADD8E6 - classic 'lightblue' */

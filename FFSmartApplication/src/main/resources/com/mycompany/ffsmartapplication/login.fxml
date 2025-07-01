@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ffsmartapplication.controllers.LoginController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="40" />
+    </padding>
+
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Login" />
+
+    <TextField fx:id="usernameField" promptText="Username" style="-fx-pref-width: 250;" />
+    <PasswordField fx:id="passwordField" promptText="Password" style="-fx-pref-width: 250;" />
+
+    <Button onAction="#handleLogin" style="-fx-pref-width: 250; -fx-font-size: 16;" styleClass="green-button" stylesheets="@../../../styles/login.css" text="Login" />
+
+    <!-- 'Back' button to go back to Start Page -->
+    <Button onAction="#handleBack" style="-fx-pref-width: 250;" styleClass="text-field" stylesheets="@../../../styles/login.css" text="Back" />
+</VBox>

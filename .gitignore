@@ -1,0 +1,4 @@
+/FFSmartApplication/target/
+# Ignore database configuration file
+/FFSmartApplicationsrc/main/resources/config.properties
+/FFSmartApplication/nbproject/

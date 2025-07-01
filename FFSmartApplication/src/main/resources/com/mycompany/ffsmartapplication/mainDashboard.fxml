@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="497.0" prefWidth="320.0" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ffsmartapplication.controllers.MainDashboardController">
+   <children>
+      <TableView fx:id="notificationsTable" prefHeight="200.0" prefWidth="319.0">
+        <columns>
+          <TableColumn fx:id="colMessage" prefWidth="319.0" text="Notification" />
+        </columns>
+      </TableView>
+      <Button fx:id="orderButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleOrder" text="Order">
+      </Button>
+      <GridPane fx:id="mainGridPane" alignment="CENTER" hgap="20" vgap="20">
+          <!-- margin around the edges -->
+          <padding>
+              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+          </padding>
+      
+          <!-- BACK DOOR Button in row=0 col=0 -->
+          <Button fx:id="backDoorButton" alignment="CENTER" contentDisplay="TOP" onAction="#handleBackDoor" prefHeight="100" prefWidth="120" text="Back Door" textAlignment="CENTER">
+              <graphic>
+                  <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                      <image>
+                          <!-- icon path - -->
+                          <Image url="@icons/FFBox.png" />
+                      </image>
+                  </ImageView>
+              </graphic>
+          </Button>
+      
+          <!-- FRONT DOOR Button in row=0 col=1 -->
+          <Button fx:id="frontDoorButton" alignment="CENTER" contentDisplay="TOP" onAction="#handleFrontDoor" prefHeight="100" prefWidth="120.0" text="Front Door" GridPane.columnIndex="1">
+              <graphic>
+                  <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                      <image>
+                          <Image url="@icons/FFfrontdoor.png" />
+                      </image>
+                  </ImageView>
+              </graphic>
+          </Button>
+      
+          <!-- ADMIN Button in row=1 col=0 -->
+          <Button fx:id="adminButton" contentDisplay="TOP" onAction="#handleAdmin" prefHeight="100" prefWidth="120" text="Admin" GridPane.rowIndex="1">
+              <graphic>
+                  <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                      <image>
+                          <Image url="@icons/FFadmin.png" />
+                      </image>
+                  </ImageView>
+              </graphic>
+          </Button>
+      
+          <!-- LOGOUT Button in row=1 col=1 -->
+          <Button fx:id="logoutButton" contentDisplay="TOP" onAction="#handleLogout" prefHeight="100" prefWidth="120" text="Logout" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <graphic>
+                  <ImageView fitHeight="32" fitWidth="32" preserveRatio="true">
+                      <image>
+                          <Image url="@icons/FFexit.png" />
+                      </image>
+                  </ImageView>
+              </graphic>
+          </Button>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      
+      </GridPane>
+   </children>
+</VBox>
